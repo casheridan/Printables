@@ -3,7 +3,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: #fff;
-  font-family: Montserrat;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .w-nav {
@@ -30,6 +30,7 @@
   align-items: center;
   align-self: auto;
   flex: 1 1 0%;
+  font-weight: 700;
 }
 
 .w-nav-brand {
@@ -67,7 +68,7 @@
   padding-left: 40px;
   color: #747474;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: lowercase;
 }
