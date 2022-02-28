@@ -94,9 +94,23 @@
     list-style-type: none;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    padding-top: 16px;
-    padding-bottom: 16px;
     padding-left: 50px;
+    user-select: none;
+    transition: all 300ms ease-in-out;
+}
+
+.right-angle {
+    height: 1.5em;
+    width: 1.5em;
+    transition: transform 0.3s;
+}
+
+.right-angle.active {
+    transform: rotate(90deg);
+}
+
+.printable p {
+    margin-left: 50px;
 }
 
 /* width */

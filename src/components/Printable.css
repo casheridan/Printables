@@ -1,0 +1,33 @@
+.rollout-banner-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.rollout-banner {
+    display: none;
+}
+
+.rollout-banner.active {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #f5f5f5;
+    border-top: 1px solid grey;
+    animation: growDown 200ms ease-in-out;
+    transform-origin: top center;
+}
+
+.rollout-banner li {
+    display: flex;
+    align-items: center;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
