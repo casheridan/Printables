@@ -1,0 +1,137 @@
+.newprint-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 75px;
+}
+
+.new-btn {
+    width: 35px;
+    height: 35px;
+    color: #0372BD;
+}
+
+.newprint-btn p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.my-printables {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+.printbox-switch {
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+.switch-item {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.switch-item.active {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.printbox-switch li + li:before{
+    content: " | ";
+    padding: 0 10px;
+}
+
+.printing-box {
+    border: 1px solid rgba(0, 0, 0, 75%);
+    border-radius: 7px;
+    box-shadow: 6px 6px 5px rgba(0, 0, 0, 27%);
+    flex-direction: column;
+    width: clamp(350px, 75%, 2000px);
+    height: 70vh;
+}
+
+.print-box {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    max-height: 80%;
+}
+
+.print-list {
+    width: 90%;
+    max-height: 100%;
+}
+
+.prints {
+    max-height: 95%;
+    padding-left: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.prints > li:is(:first-of-type) {
+    border-top: 1px solid rgba(0,0,0,50%);
+    border-bottom: 1px solid rgba(0,0,0,50%);
+}
+
+.prints > li:not(:last-of-type) {
+    border-bottom: 1px solid rgba(0, 0, 0, 50%)
+}
+
+.prints > li:is(:last-of-type) {
+    border-bottom: 1px solid rgba(0,0,0,50%);
+}
+
+.printable {
+    list-style-type: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    padding-left: 50px;
+    user-select: none;
+    transition: all 300ms ease-in-out;
+}
+
+.right-angle {
+    height: 1.5em;
+    width: 1.5em;
+    transition: transform 0.3s;
+}
+
+.right-angle.active {
+    transform: rotate(90deg);
+}
+
+.printable p {
+    margin-left: 50px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #ccc;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #999; 
+}
