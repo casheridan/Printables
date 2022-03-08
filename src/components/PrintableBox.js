@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import "./PrintableBox.css";
 import Printable from "./Printable";
 import { FaPlusCircle } from "react-icons/fa";
-import { getDatabase, ref, set, child, get, update } from "firebase/database";
+import { getDatabase, ref, set, child, get } from "firebase/database";
 
 function PrintableBox() {
   const db = getDatabase();
   const dbRef = ref(getDatabase());
 
-  let counter = 0;
+  const [counter, setCounter] = useState(0);
   let printRows = [];
 
   const [rows, setRows] = useState([]);
@@ -16,7 +16,7 @@ function PrintableBox() {
   let key = 0;
 
   const getPrintables = () => {
-    counter = 0;
+    setCounter(0);
     for (let i = 0; i < data.length; i++) {
       printRows.push(
         <Printable
@@ -31,7 +31,7 @@ function PrintableBox() {
         />
       );
 
-      counter++;
+      setCounter(counter + 1);
       key++;
     }
     if (rows.length === 0) {
@@ -80,7 +80,7 @@ function PrintableBox() {
       key++;
     }
 
-    set(ref(db, "prints/" + `${key}/`), {
+    set(ref(db, `prints/${key}/`), {
       title: pTitle,
       locationUrl: pLocationUrl,
       projectFiles: pProjectFiles,
